@@ -8,7 +8,7 @@
     "IPOyear": "n/a",
     "Sector": "Technology",
     "industry": "Computer Software: Prepackaged Software",
-    "Summary Quote": "http://www.nasdaq.com/symbol/ddd",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/ddd",
     "": ""
   },
   {
@@ -20,7 +20,7 @@
     "IPOyear": "n/a",
     "Sector": "Health Care",
     "industry": "Medical/Dental Instruments",
-    "Summary Quote": "http://www.nasdaq.com/symbol/mmm",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/mmm",
     "": ""
   },
   {
@@ -32,7 +32,7 @@
     "IPOyear": 2013,
     "Sector": "Consumer Services",
     "industry": "Services-Misc. Amusement & Recreation",
-    "Summary Quote": "http://www.nasdaq.com/symbol/wbai",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/wbai",
     "": ""
   },
   {
@@ -44,7 +44,7 @@
     "IPOyear": 2013,
     "Sector": "Technology",
     "industry": "Computer Software: Programming, Data Processing",
-    "Summary Quote": "http://www.nasdaq.com/symbol/wuba",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/wuba",
     "": ""
   },
   {
@@ -56,7 +56,7 @@
     "IPOyear": "n/a",
     "Sector": "Consumer Services",
     "industry": "Newspapers/Magazines",
-    "Summary Quote": "http://www.nasdaq.com/symbol/ahc",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/ahc",
     "": ""
   },
   {
@@ -68,7 +68,7 @@
     "IPOyear": 2014,
     "Sector": "Technology",
     "industry": "Computer Communications Equipment",
-    "Summary Quote": "http://www.nasdaq.com/symbol/aten",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/aten",
     "": ""
   },
   {
@@ -80,7 +80,7 @@
     "IPOyear": 2014,
     "Sector": "Health Care",
     "industry": "Medical Specialities",
-    "Summary Quote": "http://www.nasdaq.com/symbol/aac",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/aac",
     "": ""
   },
   {
@@ -92,19 +92,19 @@
     "IPOyear": "n/a",
     "Sector": "Capital Goods",
     "industry": "Aerospace",
-    "Summary Quote": "http://www.nasdaq.com/symbol/air",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/air",
     "": ""
   },
   {
     "id": 9,
     "Symbol": "AAN",
-    "Name": "Aaron&#39;s,  Inc.",
+    "Name": "Aaron's,  Inc.",
     "LastSale": 34.37,
     "MarketCap": "$2.49B",
     "IPOyear": "n/a",
     "Sector": "Technology",
     "industry": "Diversified Commercial Services",
-    "Summary Quote": "http://www.nasdaq.com/symbol/aan",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/aan",
     "": ""
   },
   {
@@ -116,7 +116,7 @@
     "IPOyear": "n/a",
     "Sector": "Consumer Durables",
     "industry": "Electrical Products",
-    "Summary Quote": "http://www.nasdaq.com/symbol/abb",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/abb",
     "": ""
   },
   {
@@ -128,7 +128,7 @@
     "IPOyear": "n/a",
     "Sector": "Health Care",
     "industry": "Major Pharmaceuticals",
-    "Summary Quote": "http://www.nasdaq.com/symbol/abt",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/abt",
     "": ""
   },
   {
@@ -140,7 +140,7 @@
     "IPOyear": 2012,
     "Sector": "Health Care",
     "industry": "Major Pharmaceuticals",
-    "Summary Quote": "http://www.nasdaq.com/symbol/abbv",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/abbv",
     "": ""
   },
   {
@@ -152,7 +152,7 @@
     "IPOyear": "n/a",
     "Sector": "Consumer Services",
     "industry": "Clothing/Shoe/Accessory Stores",
-    "Summary Quote": "http://www.nasdaq.com/symbol/anf",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/anf",
     "": ""
   },
   {
@@ -164,7 +164,7 @@
     "IPOyear": 1992,
     "Sector": "n/a",
     "industry": "n/a",
-    "Summary Quote": "http://www.nasdaq.com/symbol/gch",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/gch",
     "": ""
   },
   {
@@ -176,7 +176,7 @@
     "IPOyear": 1992,
     "Sector": "n/a",
     "industry": "n/a",
-    "Summary Quote": "http://www.nasdaq.com/symbol/jeq",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/jeq",
     "": ""
   },
   {
@@ -188,7 +188,7 @@
     "IPOyear": 1990,
     "Sector": "n/a",
     "industry": "n/a",
-    "Summary Quote": "http://www.nasdaq.com/symbol/sgf",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/sgf",
     "": ""
   },
   {
@@ -200,7 +200,7 @@
     "IPOyear": "n/a",
     "Sector": "Finance",
     "industry": "Diversified Commercial Services",
-    "Summary Quote": "http://www.nasdaq.com/symbol/abm",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/abm",
     "": ""
   },
   {
@@ -212,7 +212,7 @@
     "IPOyear": "n/a",
     "Sector": "Consumer Services",
     "industry": "Real Estate Investment Trusts",
-    "Summary Quote": "http://www.nasdaq.com/symbol/akr",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/akr",
     "": ""
   },
   {
@@ -224,7 +224,7 @@
     "IPOyear": 2001,
     "Sector": "Miscellaneous",
     "industry": "Business Services",
-    "Summary Quote": "http://www.nasdaq.com/symbol/acn",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/acn",
     "": ""
   },
   {
@@ -236,7 +236,7 @@
     "IPOyear": "n/a",
     "Sector": "Consumer Durables",
     "industry": "Publishing",
-    "Summary Quote": "http://www.nasdaq.com/symbol/acco",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/acco",
     "": ""
   },
   {
@@ -248,7 +248,7 @@
     "IPOyear": 2007,
     "Sector": "Consumer Services",
     "industry": "Other Specialty Stores",
-    "Summary Quote": "http://www.nasdaq.com/symbol/atv",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/atv",
     "": ""
   },
   {
@@ -260,7 +260,7 @@
     "IPOyear": "n/a",
     "Sector": "Technology",
     "industry": "Industrial Machinery/Components",
-    "Summary Quote": "http://www.nasdaq.com/symbol/atu",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/atu",
     "": ""
   },
   {
@@ -272,7 +272,7 @@
     "IPOyear": "n/a",
     "Sector": "Consumer Durables",
     "industry": "Building Products",
-    "Summary Quote": "http://www.nasdaq.com/symbol/ayi",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/ayi",
     "": ""
   },
   {
@@ -284,7 +284,7 @@
     "IPOyear": 2016,
     "Sector": "Consumer Non-Durables",
     "industry": "Recreational Products/Toys",
-    "Summary Quote": "http://www.nasdaq.com/symbol/golf",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/golf",
     "": ""
   },
   {
@@ -296,7 +296,7 @@
     "IPOyear": "n/a",
     "Sector": "n/a",
     "industry": "n/a",
-    "Summary Quote": "http://www.nasdaq.com/symbol/adx",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/adx",
     "": ""
   },
   {
@@ -308,7 +308,7 @@
     "IPOyear": "n/a",
     "Sector": "n/a",
     "industry": "n/a",
-    "Summary Quote": "http://www.nasdaq.com/symbol/peo",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/peo",
     "": ""
   },
   {
@@ -320,7 +320,7 @@
     "IPOyear": 2011,
     "Sector": "Consumer Non-Durables",
     "industry": "Farming/Seeds/Milling",
-    "Summary Quote": "http://www.nasdaq.com/symbol/agro",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/agro",
     "": ""
   },
   {
@@ -332,7 +332,7 @@
     "IPOyear": 2016,
     "Sector": "Capital Goods",
     "industry": "Auto Parts:O.E.M.",
-    "Summary Quote": "http://www.nasdaq.com/symbol/adnt",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/adnt",
     "": ""
   },
   {
@@ -344,7 +344,7 @@
     "IPOyear": "n/a",
     "Sector": "Consumer Services",
     "industry": "Other Specialty Stores",
-    "Summary Quote": "http://www.nasdaq.com/symbol/aap",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/aap",
     "": ""
   },
   {
@@ -356,7 +356,7 @@
     "IPOyear": 2016,
     "Sector": "Public Utilities",
     "industry": "Environmental Services",
-    "Summary Quote": "http://www.nasdaq.com/symbol/adsw",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/adsw",
     "": ""
   },
   {
@@ -368,7 +368,7 @@
     "IPOyear": 2014,
     "Sector": "Capital Goods",
     "industry": "Containers/Packaging",
-    "Summary Quote": "http://www.nasdaq.com/symbol/wms",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/wms",
     "": ""
   },
   {
@@ -380,7 +380,7 @@
     "IPOyear": "n/a",
     "Sector": "Technology",
     "industry": "Semiconductors",
-    "Summary Quote": "http://www.nasdaq.com/symbol/asx",
+    "SummaryQuote": "http://www.nasdaq.com/symbol/asx",
     "": ""
   }
 ]

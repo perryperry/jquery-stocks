@@ -1,4 +1,5 @@
 $(function () {
+	window.location.hash = '#';
 	// Globals variables 
 	var products 	= []; // change back to nyse later... 
 	var nasdaq 	= [];
@@ -78,22 +79,6 @@ $(function () {
 		}
 
 	});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	$.getJSON("nyse.json", function( data ) {
 		// Write the data into our global variable.
@@ -275,11 +260,69 @@ $(function () {
 		if(data.length){
 			data.forEach(function (item) {
 				if(item.id == index){
-					console.log("Got in here?");
-					// Populate '.preview-large' with the chosen product's data.
-					container.find('h3').text(item.Name);
-					// container.find('img').attr('src', item.Symbol);
-					container.find('p').text(item.industry);
+
+					console.log("Symbol: " + item.Symbol);
+
+					var exchangeIndex = 'NYSE';
+
+					$.get( "http://finance.google.com/finance/info?client=ig&q=" + exchangeIndex + "%3A" + item.Symbol, function(data) {
+		
+						})
+						  .done(function(data) {
+						   	var stocks = data;
+							stocks = stocks.trim();
+							stocks = stocks.replace(/^\/|\/$/g, '');
+							stocks = stocks.replace(/^\/|\/$/g, '');
+							stocks = stocks.trim();
+
+							var jsonStocks = JSON.parse(stocks);
+						  	console.log(jsonStocks);
+
+						  	var listing = jsonStocks[0].l;
+						  	var priceChange = parseFloat(jsonStocks[0].c);
+						  	var addCSS 		= (priceChange > 0) ? 'gain' : 'loss';
+				  			var removeCSS 	= (priceChange > 0) ? 'loss' : 'gain';
+
+						  	priceChange = (priceChange > 0) ? '+ $' + priceChange : '- $' + jsonStocks[0].c.replace('-', '');
+						  	console.log(priceChange);
+
+						  	// https://stackoverflow.com/questions/149055/how-can-i-format-numbers-as-money-in-javascript
+						  	// The new ECMAScript Internationalization API offers a numberformat function.
+
+						  	var formatter = new Intl.NumberFormat('en-US', {
+											  style: 'currency',
+											  currency: 'USD',
+											  minimumFractionDigits: 2,
+											});
+
+						  	// placing the update of the individual stock profile inside the async get, to avoid issues
+
+						  	// Populate '.preview-large' with the chosen product's data.
+							container.find('h3').text(item.Name);
+							container.find('a').attr('href', item.SummaryQuote);
+							container.find('span:nth-of-type(2)').text(item.Symbol);
+							container.find('span:nth-of-type(4)').text(item.Sector);
+							container.find('span:nth-of-type(6)').text(item.industry);
+							container.find('span:nth-of-type(8)').text(item.IPOyear);			// initial IPO
+							container.find('span:nth-of-type(10)').text('$' + jsonStocks[0].l); // current listing price
+							container.find('span:nth-of-type(12)').text(priceChange);	
+							container.find('span:nth-of-type(14)').text(jsonStocks[0].cp + '%');		// percentage change	
+
+							// change css to display green for gains, red for loss
+							container.find('span:nth-of-type(12)').addClass(addCSS);
+							container.find('span:nth-of-type(12)').removeClass(removeCSS);
+							container.find('span:nth-of-type(14)').addClass(addCSS);
+							container.find('span:nth-of-type(14)').removeClass(removeCSS);
+
+
+						  })
+						  .fail(function() {
+						    alert( "error" );
+						  })
+						  .always(function() {
+						    console.log( "get request finished" );
+						  });
+
 				}
 			});
 		}
@@ -384,7 +427,4 @@ $(function () {
 		}
 
 	}
-
-
-
 }); // end of document is ready

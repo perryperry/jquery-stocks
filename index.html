@@ -19,6 +19,7 @@
 			// 	var jsonStocks = JSON.parse(stocks);
 			//   	console.log(jsonStocks);
 			// }
+
 			function getStock(exchangeIndex, symbol) {
 				// var oReq = new XMLHttpRequest();
 				// oReq.addEventListener("load", reqListener);
@@ -47,7 +48,7 @@
 				  	var priceChangeCSS = (priceChange > 0)?  'gain' : 'loss';
 
 				  	priceChange = (priceChange > 0) ? '+ $' + priceChange : '- $' + jsonStocks[0].c.replace('-', '');
-
+				  	console.log(priceChange);
 
 				  	// https://stackoverflow.com/questions/149055/how-can-i-format-numbers-as-money-in-javascript
 				  	// The new ECMAScript Internationalization API offers a numberformat function.
@@ -73,12 +74,12 @@
 				    console.log( "get request finished" );
 				  });
 			}
-
 		</script>
 
 	</head>
 	<body>
 		<header class="compact">
+			<img src="assets/media/CALogo-white.png" class="ca-logo" />
 			<h1><a href="#">Stock Search</a></h1>
 		</header>
 
@@ -91,7 +92,7 @@
 
 					<div class="filter-criteria">
 						<span>Sector</span>
-						<label><input type="checkbox" name="Sector" value="n/a">n/a</label>
+						<label><input type="checkbox" name="Sector" value="na">n/a</label>
 						<label><input type="checkbox" name="Sector" value="BasicIndustries">Basic Industries</label>
 						<label><input type="checkbox" name="Sector" value="CapitalGoods">Capital Goods</label>
 						<label><input type="checkbox" name="Sector" value="ConsumerDurables">Consumer Durables</label>
@@ -106,26 +107,22 @@
 						<label><input type="checkbox" name="Sector" value="Technology">Technology</label>
 					</div>
 
-
 					<button>Clear filters</button>
 
 				</form>
 
 			</div>
-
 			<ul class="products-list">
 				<script id="products-template" type="x-handlebars-template">​
 					{{#each this}}
 						<li data-index="{{id}}">
-							<a href="#" class="product-photo">{{Symbol}}</a>
-							<h2><a href="#"> {{name}} </a></h2>
+							<h1 align="center">${{Name}}</h1>
 							<ul class="product-description">
-								<li><span>Name: </span>{{Name}}</li>
-								<li><span>Symbol: </span>{{Symbol}}</li>
+								<li><span>Symbol: </span>${{Symbol}}</li>
 								<li><span>Sector: </span>{{Sector}}</li>
+								<li><span>Market Cap: </span>{{MarketCap}}</li>
 							</ul>
-							<button>Buy Now!</button>
-							<p class="product-price">{{MarketCap}}</p>
+							
 							<div class="highlight"></div>
 						</li>
 					{{/each}}
@@ -141,9 +138,15 @@
 
 			<div class="preview-large">
 				<h3>Single product view</h3>
-				
-				<p></p>
-
+				<span>	<b>Symbol: </b>$</span>		<span></span><br />
+				<span>	<b>Sector: </b></span>		<span></span><br />
+				<span>	<b>Industry: </b></span>	<span></span><br />
+				<span>	<b>Initial IPO: </b></span>	<span></span><br />
+				<br /><br /><br />
+				<span>	<b>Current Price: </b></span>	<span></span><br />
+				<span>	<b>Price Change: </b></span>	<span></span><br />
+				<span>	<b>Percentage Change: </b></span>	<span></span><br />
+				<a href="#" target="_blank" >More Information</a>
 				<span class="close">×</span>
 			</div>
 
@@ -193,44 +196,5 @@
 		
 		<div id="featured-stock" ></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	</body>
-
 </html>
