@@ -1,0 +1,35 @@
+* {
+	font-family: sans-serif;
+}
+
+table * {
+	border-collapse: true;
+	border: 1px black solid;
+	padding: 15px;
+}
+
+th {
+	background-color: lightblue;
+}
+
+input[type=text] {
+	padding:5px;
+	width:100%;
+}
+button {
+	float:right;
+	margin-top: 5px;
+}
+
+.stockH1, .featured-stock {
+    display: inline;
+    margin: 5px;
+}
+
+.gain {
+	color: green;
+}
+
+.loss {
+	color: red;
+}

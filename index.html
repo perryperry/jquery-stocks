@@ -1,0 +1,145 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="./companies.js" ></script>
+		<link rel="stylesheet" type="text/css" href="stocks.css">
+
+		<script type="text/javascript" >
+			// function reqListener () {
+			// 	var stocks = this.responseText;
+			// 	stocks = stocks.trim();
+			// 	stocks = stocks.replace(/^\/|\/$/g, '');
+			// 	stocks = stocks.replace(/^\/|\/$/g, '');
+			// 	stocks = stocks.trim();
+
+			// 	var jsonStocks = JSON.parse(stocks);
+			//   	console.log(jsonStocks);
+			// }
+			function getStock(exchangeIndex, symbol) {
+				// var oReq = new XMLHttpRequest();
+				// oReq.addEventListener("load", reqListener);
+
+				// // var stockSymbol = $("#stockSymbol").val();
+				
+				// oReq.open("GET", "http://finance.google.com/finance/info?client=ig&q=" + exchangeIndex + "%3A" + symbol);
+				// oReq.send();
+
+
+				$.get( "http://finance.google.com/finance/info?client=ig&q=" + exchangeIndex + "%3A" + symbol, function(data) {
+				
+				})
+				  .done(function(data) {
+				   	var stocks = data;
+					stocks = stocks.trim();
+					stocks = stocks.replace(/^\/|\/$/g, '');
+					stocks = stocks.replace(/^\/|\/$/g, '');
+					stocks = stocks.trim();
+
+					var jsonStocks = JSON.parse(stocks);
+				  	console.log(jsonStocks);
+
+				  	var listing = jsonStocks[0].l;
+				  	var priceChange = parseFloat(jsonStocks[0].c);
+				  	var priceChangeCSS = (priceChange > 0)?  'gain' : 'loss';
+
+				  	priceChange = (priceChange > 0) ? '+ $' + priceChange : '- $' + jsonStocks[0].c.replace('-', '');
+
+
+				  	// https://stackoverflow.com/questions/149055/how-can-i-format-numbers-as-money-in-javascript
+				  	// The new ECMAScript Internationalization API offers a numberformat function.
+
+				  	var formatter = new Intl.NumberFormat('en-US', {
+									  style: 'currency',
+									  currency: 'USD',
+									  minimumFractionDigits: 2,
+									});
+
+				  	$("#featured-stock").empty();
+				  	$("#featured-stock").append(
+				  		"<h1 class='stockH1'>$" + jsonStocks[0].t + "</h1><sub>(" + jsonStocks[0].e + ")</sub><br />" +
+				  		"<b class='featured-stock'>"  + formatter.format(listing) + "</b>" +
+				  		"<br /><b class='" + priceChangeCSS + " featured-stock'>" + priceChange + "</b>"
+				  	);
+
+				  })
+				  .fail(function() {
+				    alert( "error" );
+				  })
+				  .always(function() {
+				    console.log( "get request finished" );
+				  });
+			}
+
+			$(document).ready(function(){
+				$.each(nasdaq, function( index, value ) {
+				  // console.log(index + ": " + value.Symbol );
+				   $('#nasdaq-select').append($('<option>', { 
+				        value: value.Symbol,
+				        text : value.Name + ' (' + value.Symbol + ')'
+				    }));
+				});
+				$('#nasdaq-select').change(function(){
+					var symbol = $(this).val();
+					getStock('NASDAQ', symbol);
+				});
+			})
+
+			$(document).ready(function(){
+				$.each(nyse, function( index, value ) {
+				  // console.log(index + ": " + value.Symbol );
+				   $('#nyse-select').append($('<option>', { 
+				        value: value.Symbol,
+				        text : value.Name + ' (' + value.Symbol + ')'
+				    }));
+				});
+
+				$('#nyse-select').change(function(){
+					var symbol = $(this).val();
+					getStock('NYSE', symbol);
+				});
+			})
+
+
+		</script>
+
+	</head>
+	<body>
+		<h1 align="center" >Stock Search</h1>
+		<table align="center">
+			<thead>
+				<tr>
+					<th>NASDAQ</th>
+					<th>NYSE</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<select id="nasdaq-select">
+							<option value="">NASDAQ listed Companies</option>
+						</select>
+					</td>
+					<td>
+						<select id="nyse-select">
+							<option value="">NYSE listed Companies</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="nasdaq-input" type="text" placeholder="Enter NASDAQ stock symbol" />
+						<button id="nasdaq-submit" >get Stock</button>
+					</td>
+					<td>
+						<input id="nyse-input" type="text" placeholder="Enter NYSE stock symbol" />
+						<button id="nyse-submit" >get Stock</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<div id="featured-stock" ></div>
+
+	</body>
+
+</html>
