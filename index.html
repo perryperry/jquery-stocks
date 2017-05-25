@@ -106,6 +106,12 @@
 						<label><input type="checkbox" name="Sector" value="Transportation">Transportation</label>
 						<label><input type="checkbox" name="Sector" value="Technology">Technology</label>
 					</div>
+					
+					<div class="filter-criteria">
+						<span>Market Cap</span>
+						<label><input type="checkbox" value="M" name="MarketCap">Millions</label>
+						<label><input type="checkbox" value="B" name="MarketCap">Billions</label>
+					</div>
 
 					<button>Clear filters</button>
 
@@ -116,7 +122,7 @@
 				<script id="products-template" type="x-handlebars-template">​
 					{{#each this}}
 						<li data-index="{{id}}">
-							<h1 align="center">${{Name}}</h1>
+							<h1 align="center">{{Name}}</h1>
 							<ul class="product-description">
 								<li><span>Symbol: </span>${{Symbol}}</li>
 								<li><span>Sector: </span>{{Sector}}</li>

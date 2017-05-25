@@ -339,7 +339,7 @@ $(function () {
 	function renderFilterResults(filters, products){
 
 			// This array contains all the possible filter criteria.
-		var criteria = ['Sector'],
+		var criteria = ['Sector', 'MarketCap'],
 			results = [],
 			isFiltered = false;
 
@@ -384,6 +384,11 @@ $(function () {
 
 						if(typeof item.Sector == 'string'){
 							if(item.Sector.replace(' ', '').indexOf(filter) != -1){
+								results.push(item);
+								isFiltered = true;
+							}
+
+							if(item.MarketCap.substr(-1).indexOf(filter) != -1) {
 								results.push(item);
 								isFiltered = true;
 							}
