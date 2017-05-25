@@ -1,8 +1,9 @@
 <html>
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script type="text/javascript" src="./companies.js" ></script>
-		<link rel="stylesheet" type="text/css" href="stocks.css">
+		<script src="assets/js/script.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="assets/css/stocks.css">
 
 		<script type="text/javascript" >
 			// function reqListener () {
@@ -69,37 +70,7 @@
 				    console.log( "get request finished" );
 				  });
 			}
-
-			$(document).ready(function(){
-				$.each(nasdaq, function( index, value ) {
-				  // console.log(index + ": " + value.Symbol );
-				   $('#nasdaq-select').append($('<option>', { 
-				        value: value.Symbol,
-				        text : value.Name + ' (' + value.Symbol + ')'
-				    }));
-				});
-				$('#nasdaq-select').change(function(){
-					var symbol = $(this).val();
-					getStock('NASDAQ', symbol);
-				});
-			})
-
-			$(document).ready(function(){
-				$.each(nyse, function( index, value ) {
-				  // console.log(index + ": " + value.Symbol );
-				   $('#nyse-select').append($('<option>', { 
-				        value: value.Symbol,
-				        text : value.Name + ' (' + value.Symbol + ')'
-				    }));
-				});
-
-				$('#nyse-select').change(function(){
-					var symbol = $(this).val();
-					getStock('NYSE', symbol);
-				});
-			})
-
-
+			
 		</script>
 
 	</head>
